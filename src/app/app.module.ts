@@ -6,17 +6,21 @@ import { ActivityComponent } from './activity/activity.component';
 import {HttpClientModule} from '@angular/common/http';
 import { PlayersComponent } from './players/players.component';
 import { AgePipe } from './age.pipe';
+import { FilterPipe } from './filter.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ActivityComponent,
     PlayersComponent,
-    AgePipe
+    AgePipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,10 +15,15 @@
   <h2>Top Players</h2>
 </div>
 
+<div style="text-align: center">
+  <input type="text" placeholder="search by team" [(ngModel)]="searchName">
+</div>
+<br>
+
 <div class="container">
   <table class="table">
     <thead>
-    <tr *ngIf="players.length > 0">
+    <tr>
       <th>Name</th>
       <th>Team</th>
       <th>DOB</th>
@@ -29,7 +34,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr class="table-secondary" *ngFor="let player of players">
+    <tr class="table-secondary" *ngFor="let player of players | filter:searchName">
       <td>{{player.name}}</td>
       <td>{{player.team}}</td>
       <td>{{player.dob}}</td>

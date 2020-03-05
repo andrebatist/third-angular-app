@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class PlayersComponent implements OnInit {
 
   players: any;
+  searchName = '';
 
   constructor(private http: HttpClient) { }
 
