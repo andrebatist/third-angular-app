@@ -9,6 +9,8 @@ import {HttpClient} from '@angular/common/http';
 export class ActivityComponent implements OnInit {
 
   activities: any;
+  message: string = 'welCOme to JAVAtechie';
+  amount: number = 500;
 
   constructor(private http: HttpClient) { }
 

@@ -10,7 +10,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div style="text-align: center">
+  <h1>{{message | titlecase}}</h1>
+  <h2>{{amount | currency:'USD'}}</h2>
+</div>
+<div style="text-align: center" class="alert alert-success">
+  <p>{{activities | json}}</p>
+</div>
 <div class="container">
   <table class="table">
     <thead>
@@ -24,8 +30,8 @@
     <tbody>
       <tr class="table-secondary" *ngFor="let activity of activities">
         <td>{{activity.id}}</td>
-        <td>{{activity.title}}</td>
-        <td>{{activity.dueDate}}</td>
+        <td>{{activity.title | uppercase}}</td>
+        <td>{{activity.dueDate | date :'shortDate'}}</td>
         <td>
           <div [ngSwitch]="activity.status">
             <span *ngSwitchCase="0">Not Completed</span>
