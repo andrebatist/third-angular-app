@@ -8,6 +8,7 @@ import { PlayersComponent } from './players/players.component';
 import { AgePipe } from './age.pipe';
 import { FilterPipe } from './filter.pipe';
 import {FormsModule} from '@angular/forms';
+import { ScorePipe } from './score.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {FormsModule} from '@angular/forms';
     ActivityComponent,
     PlayersComponent,
     AgePipe,
-    FilterPipe
+    FilterPipe,
+    ScorePipe
   ],
   imports: [
     BrowserModule,

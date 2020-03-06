@@ -31,6 +31,7 @@
       <th>6 Run</th>
       <th>Others</th>
       <th>Age</th>
+      <th>Score</th>
     </tr>
     </thead>
     <tbody>
@@ -42,6 +43,7 @@
       <td>{{player.noOf6}}</td>
       <td>{{player.others}}</td>
       <td>{{player.dob | age}}</td>
+      <td>{{player.others | score :player.noOf4 :player.noOf6}}</td>
     </tr>
     </tbody>
   </table>
